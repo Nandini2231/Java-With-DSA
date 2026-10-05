@@ -1,0 +1,37 @@
+class demo{
+    public static void getException(int x) {
+        int t;
+        int arr[]=new int[2];
+        System.out.println("Current value is"+x);
+        try{
+            switch (x) {
+                case 0:
+                    t=10/x;//genetate div-by-zero error
+                    
+                    break;
+            
+                case 1:
+                arr[4]=10;
+                      break;
+                      case 2:
+                      break;//return from try block
+            }
+        }catch(ArithmeticException exc){
+            System.out.println("Can't divide by zero!");
+        } catch(ArrayIndexOutOfBoundsException exc){
+            System.out.println("Element not found");
+        }
+        finally{
+            System.out.println("Finally statement");
+        }
+    }
+}
+public class UseFinally{
+    public static void main(String args[]){
+        for(int i=0;i<3;i++){
+            UseFinally.getException(i);
+            System.out.println("--------------------------------------------")
+
+        }
+    }
+}
