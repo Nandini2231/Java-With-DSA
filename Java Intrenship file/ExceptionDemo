@@ -1,0 +1,22 @@
+public class ExceptinDemo {
+    static void fun()
+    {
+        try{
+            throw new NullPointerException("demo");
+        }
+        catch(NullPointerException exc){
+            System.out.println("caught in fun()");
+            throw exc;
+        }
+    }
+    public static void main(String args[]){
+        try{
+            fun();
+
+        }catch(NullPointerException exc){
+            System.out.println("Caught in the main()");
+        }
+    
+    }
+    
+}
