@@ -1,0 +1,18 @@
+public class ExcDemo{
+    public static void main(String args[]){
+        int numer[]={23,34,45,6,7,89};
+        int denom[]={2,0,0,45};
+
+        for(int i=0;i<numer.length;i++){
+            try{
+                System.out.println(numer[i]+"/"+denom[i]+"is "+numer[i]/denom[i]);
+            }catch(ArrayIndexOutOfBoundsException exc){
+                System.out.println("Element not found");
+            }catch(Throwable exc){
+                System.out.println("Somthing error occured");
+            
+            }
+        }
+
+    }
+}
